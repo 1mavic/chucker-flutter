@@ -49,7 +49,7 @@ class Settings {
         notificationAlignment: Alignment.bottomCenter,
         apiThresholds: 100,
         httpMethod: HttpMethod.none,
-        showNotification: true,
+        showNotification: false,
         showDeleteConfirmDialog: true,
         showRequestsStats: true,
         positionBottom: 0,
@@ -114,10 +114,7 @@ class Settings {
       'duration': duration.inSeconds,
       'httpMethod': httpMethod.index,
       'language': language.index,
-      'notificationAlignment': [
-        notificationAlignment.x,
-        notificationAlignment.y
-      ],
+      'notificationAlignment': [notificationAlignment.x, notificationAlignment.y],
       'positionBottom': positionBottom,
       'positionLeft': positionLeft,
       'positionRight': positionRight,
@@ -145,13 +142,11 @@ class Settings {
   }) {
     return Settings(
       duration: duration ?? this.duration,
-      notificationAlignment:
-          notificationAlignment ?? this.notificationAlignment,
+      notificationAlignment: notificationAlignment ?? this.notificationAlignment,
       apiThresholds: apiThresholds ?? this.apiThresholds,
       httpMethod: httpMethod ?? this.httpMethod,
       showNotification: showNotification ?? this.showNotification,
-      showDeleteConfirmDialog:
-          showDeleteConfirmDialog ?? this.showDeleteConfirmDialog,
+      showDeleteConfirmDialog: showDeleteConfirmDialog ?? this.showDeleteConfirmDialog,
       showRequestsStats: showRequestsStats ?? this.showRequestsStats,
       positionBottom: positionBottom ?? this.positionBottom,
       positionLeft: positionLeft ?? this.positionLeft,
